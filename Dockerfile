@@ -16,4 +16,4 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
-CMD ["node", "bot.js"]
+CMD ["node", "bot_whatsapp_listener.js"]
