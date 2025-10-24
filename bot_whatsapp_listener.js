@@ -45,7 +45,7 @@ function cargarClientesDesdeExcel() {
         const workbook = xlsx.readFile(EXCEL_FILE_PATH);
         const sheetName = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[sheetName];
-        listaClientes = xlsx.utils.sheet_to_json(worksheet).map(cliente => ({
+        listaClientes = xlsm.utils.sheet_to_json(worksheet).map(cliente => ({
             ...cliente,
             Telefono: String(cliente.Telefono)
         }));
